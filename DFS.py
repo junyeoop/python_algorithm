@@ -10,6 +10,7 @@ graph = {
     7: [3],
 }
 
+# 스택사용, 재귀보다 반복이 조금 더 빨라, 보통 BFS보다 DFS로 풀이
 
 # recursive pseudocode
 #  DFS(G,V)
