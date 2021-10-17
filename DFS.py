@@ -12,6 +12,13 @@ graph = {
 
 # 스택사용, 재귀보다 반복이 조금 더 빨라, 보통 BFS보다 DFS로 풀이
 
+# 동작 과정 :
+# 1. 탐색 시작 노드(v)를 스택에 삽입 후 방문 처리(discovered)
+# 2. 스택 최상단 노드에 방문하지 않은 인접 노드 존재 -> 인접 노드를 스택에 삽입 후 방문 처리
+# 3. 방문하지 않은 인접 노드 존재 x -> 스택의 최상단 노드 pop
+# 4. 2~3 과정 반복
+
+
 # recursive pseudocode
 #  DFS(G,V)
 #    label v as discovred
@@ -21,7 +28,9 @@ graph = {
 
 
 def recursiveDFS(v, discovered=[]):
+    # 현재 노드 방문처리
     discovered.append(v)
+    # 현재 노드와 연결된 다른 노드 방문
     for w in graph[v]:
         if not w in discovered:
             discovered = recursiveDFS(w, discovered)
@@ -54,3 +63,11 @@ def stackDFS(start_v):
 
 # recursiveDFS(1)
 # stackDFS(1)
+
+---------------------------------------------------------------------
+
+def dfs(graph, v, visited)
+
+
+
+
