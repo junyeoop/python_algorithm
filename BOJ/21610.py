@@ -72,8 +72,10 @@ for i in range(1, N + 1):
     water[i] += (list(map(int, input().split())))
 
 input_data = [[] for i in range(M)]
+
 # M개 입력받기
 for i in range(M):
+
     input_data[i] = (list(map(int, input().split())))
 #비바라기
 clouds = collections.deque([[N, 1], [N, 2], [N - 1, 1], [N - 2, 2]])
@@ -89,7 +91,10 @@ for m in range(M):
         cloud = clouds.popleft()
         print(cloud)
         move_cloud(cloud[0], cloud[1], di, si)
-        
+
 
 print(sum(sum(a) for a in water))
 # print(len(water))
+
+
+# https://chldkato.tistory.com/192 참고하자..
