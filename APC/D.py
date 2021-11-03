@@ -24,7 +24,7 @@ def max_sub_array(arr, k):
 
 n, t = map(int, sys.stdin.readline().split())
 schedule = []
-time = [0 for _ in range(100100)]
+time = [0 for _ in range(100100)] # 이거 미친 인풋때문에 에러 났던거임;
 m = 0
 index = 0
 
